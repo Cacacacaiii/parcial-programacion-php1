@@ -1,0 +1,5 @@
+users => Autor: Nombre completo, Email, Password
+
+Posts: Titulo, Cuerpo, Autor y Fecha y Hora de Publicación
+
+¿Meses?: Los meses que tienen publicaciones, una vez se cliquee el mes tiene que mostrar las publicaciones que tiene
