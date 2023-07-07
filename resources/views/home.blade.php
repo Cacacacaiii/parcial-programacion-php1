@@ -26,6 +26,8 @@
 
 
 <h1>Registrate</h1>
+
+<form action="{{ route('register') }}" method="POST">
 <br>
 <input type="text" name="ingresa_nombre" placeholder="Ingrese su nombre completo">
 <br>
@@ -34,6 +36,9 @@
 <input type="password" name="ingresa_password" placeholder="Ingrese su password">
 <br>
 <button type="submit">Enviar</button>
+<br>
+</form>
+
 
 
 </body>
