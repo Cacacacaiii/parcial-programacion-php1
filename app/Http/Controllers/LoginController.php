@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\DB;
+
 
 class LoginController extends Controller
 {
@@ -21,4 +23,23 @@ class LoginController extends Controller
             ])->redirectTo(route('login'));
         }
     }
+
+    public function register(Request $request)
+    {
+        $name = $request->input('ingresa_nombre');
+        $email = $request->input('ingresa_email');
+        $password = $request->input('ingresa_password');
+
+       
+        DB::table('users')->insert([
+            'name' => $name,
+            'email' => $email,
+            'password' => bcrypt($password)
+        ]);
+
+        return redirect('/');
+    }
 }
+
+
+
