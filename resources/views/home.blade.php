@@ -40,6 +40,18 @@
 </form>
 
 
+@if($users->count() > 0)
+    <h2>Usuarios Registrados:</h2>
+    <ul>
+        @foreach($users as $user)
+            <li>{{ $user->name }} - {{ $user->email }}</li>
+        @endforeach
+    </ul>
+@else
+    <p>No hay usuarios registrados</p>
+@endif
+
+
 
 </body>
 </html>
