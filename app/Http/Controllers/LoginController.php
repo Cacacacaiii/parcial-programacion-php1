@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\DB;
+use App\Models\User;
+
 
 
 class LoginController extends Controller
@@ -39,6 +41,13 @@ class LoginController extends Controller
 
         return redirect('/');
     }
+
+    public function showHome()
+{
+    $users = User::all();
+
+    return view('home', compact('users'));
+}
 }
 
 
