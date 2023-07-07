@@ -13,6 +13,7 @@ use App\Models\User;
 
 class LoginController extends Controller
 {
+    
     public function login(Request $request)
     {
         $credentials = $request->only('email', 'password');
@@ -48,6 +49,7 @@ class LoginController extends Controller
 
     return view('home', compact('users'));
 }
+
 }
 
 

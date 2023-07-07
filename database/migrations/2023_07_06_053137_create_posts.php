@@ -17,7 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('titulo');
             $table->string('cuerpo');
-            $table->unsignedBigInteger('id_Autor');
+            $table->string('identidadAutor');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
